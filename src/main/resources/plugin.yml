@@ -1,0 +1,6 @@
+name: ${rootProject.name}
+main: ${group}
+version: ${version}
+commands:
+  joinmsg:
+    description: reload cmd

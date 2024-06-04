@@ -1,0 +1,38 @@
+joinMsg: |
+  {clickPlayer} &a加入服务器 {sayWelcome}
+  &e多行信息
+  &e多行信息
+quitMsg: |
+  %player_name% &c推出了服务器 {farewell}
+  &e多行信息
+  &e多行信息
+  
+component:
+  clickPlayer:
+    display: '%player_name%'
+    click:
+      ##
+      #        OPEN_URL, 打开url
+      #        RUN_COMMAND, 运行命令
+      #        SUGGEST_COMMAND, 提示命令
+      ##
+      type: SUGGEST_COMMAND
+      content: '/tpa %player_name%'
+    hover: |
+      &3点击传送至 §a%player_name% &3身边,&7好好陪陪[他/她],&8呕~
+      &e=====================================
+  sayWelcome:
+    display: '&a[欢迎]'
+    click:
+      type: SUGGEST_COMMAND
+      content: '%player_name% 新人爆照'
+    hover: |
+      &3欢迎玩家
+  farewell:
+    display: '&6[欢送]'
+    click:
+      identity: PLAYER
+      type: SUGGEST_COMMAND
+      content: '%player_name%! 你怎么走了,没有你我怎么办啊 %player_name% %player_name%~~~!'
+    hover: |
+      &3呜呜呜,你别走<欢送>
